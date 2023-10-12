@@ -8,7 +8,7 @@ const generateWallet = async () => {
     let Address = [...data];
     let mnemonic = await bip39.generateMnemonic();
 
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 10; i++) {
       let path = `m/44'/60'/0'/0/${i}`;
 
       const seed = bip39.mnemonicToSeedSync(mnemonic);

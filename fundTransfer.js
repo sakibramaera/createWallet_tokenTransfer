@@ -86,7 +86,6 @@ const getTransactionFinalisation = async (txnHash) => {
       } catch (err) {
         console.log("getStat", err);
       }
-    
     }
 
     resolve(record);
@@ -132,20 +131,20 @@ const transferamount = async (address, amount) => {
   }
 };
 
-const checkBalance = async () => {
-  const balance = await myContract.methods.balanceOf(account1).call();
-  console.log(balance);
-};
+// const checkBalance = async () => {
+//   const balance = await myContract.methods.balanceOf(account1).call();
+//   console.log(balance);
+// };
 
-// fundTransfer(1000);
+fundTransfer(ethers.parseEther("11"));
 // checkBalance();
 
-const startTransfer = async () => {
-  for (let item of data) {
-    await transferamount(item.address, 100);
-  }
-};
+// const startTransfer = async () => {
+//   for (let item of data) {
+//     await transferamount(item.address, 10);
+//   }
+// };
 
-(async () => {
-  await startTransfer();
-})();
+// (async () => {
+//   await startTransfer();
+// })();
